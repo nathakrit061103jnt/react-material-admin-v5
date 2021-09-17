@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
@@ -14,16 +14,11 @@ import MailIcon from "@mui/icons-material/Mail";
 
 const drawerWidth = 240;
 
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
-}));
-
-export default function MenuComponent({ open, handleDrawerChange }) {
+export default function MenuComponent({
+  open,
+  handleDrawerChange,
+  DrawerHeader,
+}) {
   const theme = useTheme();
 
   return (

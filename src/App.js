@@ -48,7 +48,11 @@ export default function PersistentDrawerLeft() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBarComponent handleDrawerChange={handleDrawerChange} open={open} />
-      <MenuComponent handleDrawerChange={handleDrawerChange} open={open} />
+      <MenuComponent
+        handleDrawerChange={handleDrawerChange}
+        open={open}
+        DrawerHeader={DrawerHeader}
+      />
       <Main open={open}>
         <DrawerHeader />
         <Typography paragraph>
